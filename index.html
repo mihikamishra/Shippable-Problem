@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title>Shippable problem </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="script.js"></script>
+<style>
+#errorMsg {
+display:none;
+}
+</style>
+</head>
+<body>
+<div class="jumbotron">
+ <div class="container">
+  <h1>Github issues</h1>
+  <p>Enter an url of the github repository</p>
+  <p><input type="url" id="repoUrl" name="repoUrl"  required /><input type="submit" id='submitUrlBtn' onClick="getIssues();" value="Get Issues" />
+  </p>
+   </div>
+  <div class="container">
+<div id="errorMsg" class="alert alert-danger"> </div>
+  <table class="table table-bordered">
+  <tr><th> TOTAL NUMBER OF ISSUES </th> <th> Issues in Last 24 Hrs</th> <th> Issues in Last 7 days </th> <th> Issues in more than 7 days </th></tr>
+  <tr><td id="totalIssues"></td> <td id="last24Hrs"></td><td id="last7"></td><td id="morethan7"></td> </tr>
+  </table>
+<button id="reloadBtn" onClick="window.location.reload();"  >Check Another Repository </button>
+  </div>
+</div>
+
+
+
+</body>
+</html>
